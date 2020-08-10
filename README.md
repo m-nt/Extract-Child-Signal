@@ -12,7 +12,7 @@ step 2: install all requirements modules :
 
 - secon run this code : 
 
-> pip install -r Requierements
+> pip install -r Requirements
 
 ### if pip doesn't work just run fix_pip.py :
 
