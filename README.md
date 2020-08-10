@@ -26,6 +26,5 @@ in CMD just run Process.py:
 
 ## OUTPUT
 
-### Raw data
 
-![ACF](https://github.com/yeganeyazdanian/ACF_ECG/blob/master/Exports/Row_data.png)
+![ACF](https://github.com/yeganeyazdanian/Extract-Child-Signal/blob/master/Exports/Figure_1.png)
