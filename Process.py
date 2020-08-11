@@ -8,7 +8,7 @@ import padasip as pa
 def ReShape(data, shape):
     data_shaped = np.zeros(shape)
     for i in range(len(data_shaped[0, 0:])):
-        for j in range(len(data_shaped[0:, 0])):
+        for j in range(len(data_shaped[0:, i])):
             data_shaped[j, i] = data[i, j]
     return data_shaped
 
