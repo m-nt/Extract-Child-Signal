@@ -27,4 +27,4 @@ in CMD just run Process.py:
 ## OUTPUT
 
 
-![ACF](https://github.com/yeganeyazdanian/Extract-Child-Signal/blob/master/Exports/Figure_1.png)
+![ACF](https://github.com/yeganeyazdanian/Extract-Child-Signal/blob/master/Exports/Figure_final.png)
