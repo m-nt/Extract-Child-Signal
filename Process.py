@@ -13,9 +13,9 @@ def ReShape(data, shape):
     return data_shaped
 
 
-def PreProcess(meandata, index, start, end, raw_data=False):
+def PreProcess(meandata, index, start, end, check=False):
     data = meandata[index, start: end]
-    if raw_data:
+    if check:
         x = np.arange(len(data))
         return (x, data)
     Base_drift = hp.remove_baseline_wander(data, 1000)
@@ -39,7 +39,7 @@ f = io.loadmat("r01_edfm.mat")
 
 basedata = f["val"]
 
-x, andomen_raw = PreProcess(basedata, 3, 4000, 8000, raw_data=True)
+x, andomen_raw = PreProcess(basedata, 3, 4000, 8000, check=True)
 Ax_1, Abdomen_1 = PreProcess(basedata, 1, 4000, 8000)
 Ax_2, Abdomen_2 = PreProcess(basedata, 2, 4000, 8000)
 Ax_3, Abdomen_3 = PreProcess(basedata, 3, 4000, 8000)
