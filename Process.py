@@ -2,7 +2,6 @@ from scipy import io, signal
 import matplotlib.pyplot as plt
 import numpy as np
 import heartpy as hp
-import filterutil as filt
 import padasip as pa
 
 
@@ -51,8 +50,6 @@ Abdomens = ReShape(AbdomensHold, (4000, 4))
 
 Dx, Direction = PreProcess(basedata, 0, 4000, 8000)
 
-DI = filt.QRS_Extraction(Direction, 50, 50)
-
 Abdomens_number = 3
 f = pa.filters.FilterNLMS(n=4, mu=0.0001, w="random")
 y, e, w = f.run(Direction, Abdomens)
@@ -74,7 +71,7 @@ plt.legend()
 plt.tight_layout()
 plt.subplot(224)
 plt.title("Pre-Processed")
-plt.plot(DI, "g", label="QRS_Extraction")
+plt.plot(Direction, "g", label="Direction")
 plt.legend()
 plt.tight_layout()
 plt.show()
